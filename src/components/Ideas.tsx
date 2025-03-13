@@ -94,11 +94,11 @@ export const Ideas = () => {
                         onChange={(e) => setNewIdea(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="Type an idea and press Enter..."
-                        className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-purple-500"
+                        className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                     <Button 
                         onClick={addIdea}
-                        className="bg-purple-600 hover:bg-purple-700 text-white p-2"
+                        className="bg-blue-600 hover:bg-blue-700 text-white p-2"
                     >
                         <Plus className="w-4 h-4" />
                     </Button>
@@ -108,7 +108,7 @@ export const Ideas = () => {
                     {ideas.map((idea) => (
                         <div 
                             key={idea.id} 
-                            className="bg-neutral-800/50 p-3 rounded-lg hover:bg-purple-900/20 transition-colors border border-white/5 cursor-pointer"
+                            className="bg-neutral-800/50 p-3 rounded-lg hover:bg-blue-900/20 transition-colors border border-white/5 cursor-pointer"
                             onClick={() => openIdeaDetails(idea)}
                         >
                             <p className="text-gray-300">{idea.title}</p>
@@ -161,12 +161,12 @@ export const Ideas = () => {
                                 <div className="space-y-2 mb-2">
                                     {selectedIdea.resources?.map((resource, idx) => (
                                         <div key={idx} className="flex items-center gap-2 bg-neutral-700/30 p-2 rounded">
-                                            <LinkIcon className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                                            <LinkIcon className="w-4 h-4 text-blue-400 flex-shrink-0" />
                                             <a 
                                                 href={resource.url}
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
-                                                className="text-sm text-purple-300 hover:underline truncate"
+                                                className="text-sm text-blue-300 hover:underline truncate"
                                             >
                                                 {resource.title}
                                             </a>
@@ -202,7 +202,7 @@ export const Ideas = () => {
 
                         <Button 
                             onClick={saveIdeaChanges}
-                            className="mt-4 bg-purple-600 hover:bg-purple-700 text-white flex items-center justify-center gap-2"
+                            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2"
                         >
                             <Save className="w-4 h-4" /> Save Changes
                         </Button>

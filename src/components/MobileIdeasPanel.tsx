@@ -147,7 +147,7 @@ export const MobileIdeasPanel = () => {
     <>
       <DrawerHeader className="border-b border-white/10 pb-4">
         <DrawerTitle className="text-xl font-bold text-white flex items-center">
-          <Lightbulb className="h-5 w-5 text-purple-400 mr-2" /> Ideas
+          <Lightbulb className="h-5 w-5 text-blue-400 mr-2" /> Ideas
         </DrawerTitle>
         <DrawerDescription className="text-gray-400">
           Browse your collection of ideas
@@ -159,13 +159,13 @@ export const MobileIdeasPanel = () => {
           <input 
             type="text"
             placeholder="Type an idea and press Enter..."
-            className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-purple-500"
+            className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={newIdeaTitle}
             onChange={(e) => setNewIdeaTitle(e.target.value)}
             onKeyPress={handleKeyPress}
           />
           <Button 
-            className="bg-purple-600 hover:bg-purple-700 text-white p-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white p-2"
             onClick={handleAddIdea}
             disabled={!newIdeaTitle.trim()}
           >
@@ -180,13 +180,13 @@ export const MobileIdeasPanel = () => {
             ideas.map((idea) => (
               <div 
                 key={idea.id} 
-                className="bg-neutral-800/50 p-3 rounded-lg border border-white/5 hover:bg-purple-900/20 hover:border-purple-700/50 transition-all cursor-pointer"
+                className="bg-neutral-800/50 p-3 rounded-lg border border-white/5 hover:bg-blue-900/20 hover:border-blue-700/50 transition-all cursor-pointer"
                 onClick={() => handleIdeaClick(idea)}
               >
                 <p className="text-gray-300">{idea.title}</p>
                 {idea.resources && idea.resources.length > 0 && (
                   <div className="mt-1 flex items-center">
-                    <LinkIcon className="w-3 h-3 text-purple-400 mr-1" />
+                    <LinkIcon className="w-3 h-3 text-blue-400 mr-1" />
                     <span className="text-xs text-gray-500">{idea.resources.length} resources</span>
                   </div>
                 )}
@@ -220,7 +220,7 @@ export const MobileIdeasPanel = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-purple-400 hover:text-purple-300 p-1"
+            className="text-blue-400 hover:text-blue-300 p-1"
             onClick={handleEditMode}
           >
             <Edit className="h-4 w-4" />
@@ -250,9 +250,9 @@ export const MobileIdeasPanel = () => {
                       href={resource.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center p-2 bg-neutral-700/30 rounded-md hover:bg-purple-900/30 transition-colors text-gray-300 hover:text-purple-200"
+                      className="flex items-center p-2 bg-neutral-700/30 rounded-md hover:bg-blue-900/30 transition-colors text-gray-300 hover:text-blue-200"
                     >
-                      <LinkIcon className="h-4 w-4 mr-2 text-purple-400" />
+                      <LinkIcon className="h-4 w-4 mr-2 text-blue-400" />
                       <span>{resource.title}</span>
                     </a>
                   ))}
@@ -300,7 +300,7 @@ export const MobileIdeasPanel = () => {
                 type="text"
                 value={editableIdea.title}
                 onChange={(e) => setEditableIdea({...editableIdea, title: e.target.value})}
-                className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-1 focus:ring-purple-500"
+                className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
             
@@ -310,7 +310,7 @@ export const MobileIdeasPanel = () => {
                 value={editableIdea.description || ''}
                 onChange={(e) => setEditableIdea({...editableIdea, description: e.target.value})}
                 rows={4}
-                className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-1 focus:ring-purple-500"
+                className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
             
@@ -351,17 +351,17 @@ export const MobileIdeasPanel = () => {
                   placeholder="Title"
                   value={newResource.title}
                   onChange={(e) => setNewResource({...newResource, title: e.target.value})}
-                  className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-1 focus:ring-purple-500 mb-2"
+                  className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 mb-2"
                 />
                 <input
                   type="url"
                   placeholder="URL (https://...)"
                   value={newResource.url}
                   onChange={(e) => setNewResource({...newResource, url: e.target.value})}
-                  className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-1 focus:ring-purple-500 mb-2"
+                  className="w-full bg-neutral-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 mb-2"
                 />
                 <Button 
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                   onClick={handleAddResource}
                   disabled={!newResource.url || !newResource.title}
                 >
@@ -379,9 +379,9 @@ export const MobileIdeasPanel = () => {
     <Drawer>
       <DrawerTrigger asChild>
         <Button 
-          className="h-14 w-14 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-900/30"
+          className="h-14 w-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/30"
         >
-          <Lightbulb className="h-6 w-6 text-purple-300" />
+          <Lightbulb className="h-6 w-6 text-blue-300" />
         </Button>
       </DrawerTrigger>
       

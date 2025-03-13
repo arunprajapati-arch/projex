@@ -36,7 +36,7 @@ const page = async () => {
   ]
 
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className="min-h-screen bg-gray-950">
         {/* Navbar */}
         <Navbar/>
 
@@ -44,7 +44,7 @@ const page = async () => {
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold text-white">Projects</h1>
                 {/* Mobile New Project Button */}
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white md:hidden flex items-center gap-2 rounded-full">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white md:hidden flex items-center gap-2 rounded-full">
                     <PlusCircle size={16} />
                     <span>New</span>
                 </Button>
