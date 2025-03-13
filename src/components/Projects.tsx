@@ -2,10 +2,10 @@ import { PlusCircle } from "lucide-react"
 import { ProjectCard } from "./ProjectCard"
 
 const projects = [
-    { name: 'Project 1', description: 'Description for project 1' },
+    { name: 'Project 1', description: 'Description for project 2 and mnay more thindgto godfdffdfdfdffdfdffdffdffdfddfdfdfdfdf' },
     { name: 'Project 2', description: 'Description for project 2' },
     { name: 'Project 2', description: 'Description for project 2' },
-    { name: 'Project 2', description: 'Description for project 2' },
+    { name: 'Project 2', description: 'Description for project 2 and mnay more thindgto godfdffdfdfdffdfdffdffdffdfddfdfdfdfdf' },
 ]
 
 

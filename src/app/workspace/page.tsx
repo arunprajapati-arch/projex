@@ -40,7 +40,7 @@ const page = async () => {
         {/* Navbar */}
         <Navbar/>
 
-        <div className="container mx-auto px-4 mt-8">
+        <div className="container mx-auto  px-4 mt-8">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold text-white">Projects</h1>
                 {/* Mobile New Project Button */}
@@ -50,7 +50,7 @@ const page = async () => {
                 </Button>
             </div>
             
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-16">
                 {/* Projects Section */}
                 <div className="w-full lg:w-3/4">
                     <Projects/>
@@ -65,7 +65,7 @@ const page = async () => {
             {/* Floating buttons for mobile */}
             <div className="fixed lg:hidden bottom-6 right-6 z-10 flex flex-col gap-3">
                 {/* Mobile Ideas Panel Component */}
-                <MobileIdeasPanel ideas={ideas} />
+                <MobileIdeasPanel  />
                 
                 
             </div>
