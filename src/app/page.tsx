@@ -85,7 +85,7 @@ export default function Home() {
                     {/* Dashboard preview image */}
                     <div className="aspect-video w-full relative bg-gray-800 flex items-center justify-center">
                       <Image 
-                        src="/dashboard.png" 
+                        src="/dashboard6.png" 
                         alt="Dashboard Preview"
                         fill
                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
